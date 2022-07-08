@@ -8,15 +8,18 @@
   <title>Евклид</title>
   <link rel="icon" type="image/png" href="/img/icon/favicon.ico" />
 
-  <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font">
-  <link rel="preload" href="fonts/Montserrat-Light.woff2" as="font">
-  <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font">
   <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font">
+  <link rel="" href="fonts/Montserrat-Medium.woff2" as="font">
+  <link rel="" href="fonts/Montserrat-Light.woff2" as="font">
+  <link rel="" href="fonts/Montserrat-Bold.woff2" as="font">
 
-  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+  <link defer rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <script defer src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script defer src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <script defer src="js/tabs.js"></script>
   <script defer src="js/slider.js"></script>
   <script defer src="js/burger-menu.js"></script>
@@ -27,7 +30,7 @@
 
 <body>
   <header class="header">
-    <button id="burger" class="header__burger-button btn" type="button" tabindex="1">
+    <button id="burger" class="header__burger-button btn" type="button" tabindex="1" aria-label="Меню">
 
       <div class="burger">
         <span class="line"></span>

@@ -950,7 +950,7 @@ body {
 
   .header__logo-img {
     width: 150px;
-    height: auto
+    height: 48px;
   }
 
   .header__nav {
@@ -1256,7 +1256,7 @@ body {
 
   .header__logo-img {
     width: 110px;
-    height: auto
+    height: 35px;
   }
 
   .burger__menu {
@@ -1510,7 +1510,7 @@ body {
 
   .footer__logo-img {
     width: 131px;
-    height: auto;
+    height: 42px;
     text-align: center
   }
 
