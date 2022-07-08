@@ -7,10 +7,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Евклид</title>
   <link rel="icon" type="image/png" href="/img/icon/favicon.ico" />
+
+  <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font">
+  <link rel="preload" href="fonts/Montserrat-Light.woff2" as="font">
+  <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font">
+  <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font">
+
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+  <script defer src="js/tabs.js"></script>
+  <script defer src="js/slider.js"></script>
+  <script defer src="js/burger-menu.js"></script>
+  <script defer src="js/accordion.js"></script>
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -93,13 +104,28 @@
       <div class="swiper">
         <ul class="swiper-wrapper ul-reset">
           <li class="swiper-slide">
-            <img class="swiper__img" src="img/slide1.jpg" alt="Слайд 1">
+            <picture>
+              <source srcset="img/hero/slide-1-320.webp" media="(max-width: 767px)">
+              <source srcset="img/hero/slide-1-768.webp" media="(max-width: 1023px)">
+              <source srcset="img/hero/slide-1-1024.webp" media="(max-width: 1440px)">
+              <img class="swiper__img" src="img/hero/slide-1-1920.webp" alt="Слайд 1">
+            </picture>
           </li>
           <li class="swiper-slide">
-            <img class="swiper__img" src="img/slide2.jpg" alt="Слайд 2">
+            <picture>
+              <source srcset="img/hero/slide-2-320.webp" media="(max-width: 767px)">
+              <source srcset="img/hero/slide-2-768.webp" media="(max-width: 1023px)">
+              <source srcset="img/hero/slide-2-1024.webp" media="(max-width: 1440px)">
+              <img class="swiper__img" src="img/hero/slide-2-1920.webp" alt="Слайд 2">
+            </picture>
           </li>
           <li class="swiper-slide">
-            <img class="swiper__img" src="img/slide3.jpg" alt="Слайд 3">
+            <picture>
+              <source srcset="img/hero/slide-3-320.webp" media="(max-width: 767px)">
+              <source srcset="img/hero/slide-3-768.webp" media="(max-width: 1023px)">
+              <source srcset="img/hero/slide-3-1024.webp" media="(max-width: 1440px)">
+              <img class="swiper__img" src="img/hero/slide-3-1920.webp" alt="Слайд 3">
+            </picture>
           </li>
         </ul>
         <div class="swiper-pagination"></div>
@@ -199,7 +225,15 @@
           </div>
 
           <div class="work-card__img">
-            <img class="img" src="img/How-we-are-working/1.jpg" alt="Изображение как мы работаем">
+
+            <picture>
+              <source srcset="img/How-we-are-working/1-320.webp" media="(max-width: 767px)">
+              <source srcset="img/How-we-are-working/1-768.webp" media="(max-width: 1023px)">
+              <source srcset="img/How-we-are-working/1-1024.webp" media="(max-width: 1440px)">
+              <img class="img" src="img/How-we-are-working/1.webp" alt="Изображение как мы работаем">
+            </picture>
+
+
           </div>
         </div>
       </article>
@@ -221,7 +255,7 @@
             <button class="btn btn--white" aria-label="кнопка договор">Договор</button>
           </div>
           <div class="work-card__img">
-            <img class="img" src="img/How-we-are-working/2.jpg" alt="Изображение коставляем смету">
+            <img class="img" src="img/How-we-are-working/2.webp" alt="Изображение коставляем смету">
           </div>
         </div>
       </article>
@@ -244,7 +278,7 @@
             <button class="btn btn--white" aria-label="кнопка договор">Договор</button>
           </div>
           <div class="work-card__img">
-            <img class="img" src="img/How-we-are-working/3.jpg" alt="Изображение Привлекаем подрядчиков">
+            <img class="img" src="img/How-we-are-working/3.webp" alt="Изображение Привлекаем подрядчиков">
           </div>
         </div>
       </article>
@@ -265,7 +299,7 @@
             <button class="btn btn--white" aria-label="кнопка договор">Договор</button>
           </div>
           <div class="work-card__img">
-            <img class="img" src="img/How-we-are-working/4.jpg" alt="Изображение Инспектируем все этапы работ">
+            <img class="img" src="img/How-we-are-working/4.webp" alt="Изображение Инспектируем все этапы работ">
           </div>
         </div>
       </article>
@@ -460,11 +494,6 @@
     </p>
   </footer>
   <!---->
-
-  <script src="js/tabs.js"></script>
-  <script src="js/slider.js"></script>
-  <script src="js/burger-menu.js"></script>
-  <script src="js/accordion.js"></script>
 
 </body>
 

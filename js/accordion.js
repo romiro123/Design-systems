@@ -1,12 +1,1 @@
-$(function () {
-  $('.question__list').accordion({
-    active: true,
-    icons: false,
-    collapsible: true,
-    heightStyle: "content",
-    classes: {
-      'ui-accordion': 'question__list',
-      'ui-state-default': 'btn--question::after',
-    },
-  });
-});
+$(function () { $(".question__list").accordion({ active: !0, icons: !1, collapsible: !0, heightStyle: "content", classes: { "ui-accordion": "question__list", "ui-state-default": "btn--question::after" } }) });
