@@ -27,6 +27,16 @@
   font-style: normal
 }
 
+:root {
+  --white: #fff;
+  --mine-shaft: #333;
+  --black: #000;
+  --orange-peel: #f90;
+  --christine: #E1670E;
+  --silver: #cacaca;
+  --dove-gray: #666;
+}
+
 body {
   margin: auto;
   font-family: 'Montserrat', Arial, sans-serif;
@@ -35,9 +45,9 @@ body {
   font-weight: 400;
   letter-spacing: 0;
   text-align: left;
-  color: #333;
+  color: var(--mine-shaft);
   max-width: 1920px;
-  background-color: #fff
+  background-color: var(--white)
 }
 
 .ul-reset {
@@ -48,7 +58,7 @@ body {
 
 .a-reset {
   text-decoration: none;
-  color: #333
+  color: var(--mine-shaft)
 }
 
 .p-reset {
@@ -63,7 +73,8 @@ body {
   cursor: pointer;
   font-family: inherit;
   font-size: inherit;
-  border-radius: 0
+  border-radius: 0;
+  color: var(--mine-shaft);
 }
 
 .input-reset {
@@ -100,7 +111,8 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 12px 75px
+  padding: 12px 75px;
+  margin-bottom: 25px;
 }
 
 .burger__menu {
@@ -112,7 +124,7 @@ body {
   bottom: 0;
   width: 200px;
   padding: 20px;
-  background-color: #fff;
+  background-color: var(--white);
   -webkit-transition: -webkit-transform .3s ease-in-out;
   transition: -webkit-transform .3s ease-in-out;
   -o-transition: transform .3s ease-in-out;
@@ -135,7 +147,7 @@ body {
 }
 
 .burger__link {
-  color: #000;
+  color: var(--black);
   font-weight: 400
 }
 
@@ -146,7 +158,7 @@ body {
 }
 
 .header__burger-button:focus {
-  outline: 2px solid #f90;
+  outline: 2px solid var(--orange-peel);
   outline-offset: 5px
 }
 
@@ -172,7 +184,7 @@ body {
 .burger .line {
   width: 100%;
   height: 3px;
-  background-color: #000;
+  background-color: var(--black);
   -webkit-transition: .2s ease-in-out;
   -o-transition: .2s ease-in-out;
   transition: .2s ease-in-out;
@@ -181,7 +193,7 @@ body {
 }
 
 .burger-active .line {
-  background-color: #e1670e
+  background-color: var(--christine)
 }
 
 .burger-active .line:nth-child(2) {
@@ -246,11 +258,11 @@ body {
 }
 
 .nav__link:active {
-  color: #e1670e
+  color: var(--christine)
 }
 
 .nav__link:focus:not(:active) {
-  outline: 2px solid #f90;
+  outline: 2px solid var(--orange-peel);
   outline-offset: 5px
 }
 
@@ -262,29 +274,29 @@ body {
 }
 
 .nav__link:hover::before {
-  border-bottom: 2px solid #f90
+  border-bottom: 2px solid var(--orange-peel)
 }
 
 .nav__link:active::before {
-  border-bottom: 2px solid #e1670e
+  border-bottom: 2px solid var(--christine)
 }
 
 .header__search-button {
   height: 22px;
   width: 22px;
-  background-color: #fff
+  background-color: var(--white)
 }
 
 .header__search-button:hover rect {
-  fill: #f90
+  fill: var(--orange-peel)
 }
 
 .header__search-button:hover path {
-  stroke: #f90
+  stroke: var(--orange-peel)
 }
 
 .header__search-button:focus {
-  outline: 2px solid #f90;
+  outline: 2px solid var(--orange-peel);
   outline-offset: 4px
 }
 
@@ -292,9 +304,10 @@ body {
   position: relative
 }
 
-.swiper {
+.swiper--hero {
   width: 100%;
-  height: 620px
+  height: 620px;
+  border-radius: 32px;
 }
 
 .swiper-wrapper {
@@ -311,7 +324,8 @@ body {
 .swiper-slide {
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center
+  background-position: center;
+  filter: brightness(70%);
 }
 
 .swiper-horizontal>.swiper-pagination-horizontal, .swiper-pagination-fraction {
@@ -325,12 +339,12 @@ body {
 }
 
 .swiper-pagination-bullet:focus {
-  outline: 2px solid #e1670e;
+  outline: 2px solid var(--christine);
   outline-offset: -3px
 }
 
 .swiper-pagination-bullet-active {
-  background: #fff
+  background: var(--white)
 }
 
 .swiper-horizontal>.swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
@@ -350,7 +364,7 @@ body {
   font-weight: 800;
   font-size: 70px;
   line-height: 85px;
-  color: #fff;
+  color: var(--white);
   margin-bottom: 25px
 }
 
@@ -360,15 +374,15 @@ body {
   font-weight: bold;
   font-size: 24px;
   line-height: 29px;
-  color: #fff;
+  color: var(--white);
   margin-bottom: 90px
 }
 
 .btn--orange {
   padding: 20px 38px;
-  background-color: #f90;
+  background-color: var(--orange-peel);
   font-weight: bold;
-  color: #fff
+  color: var(--white)
 }
 
 .btn--orange:hover {
@@ -381,7 +395,7 @@ body {
 }
 
 .btn--orange:active {
-  background: #e1670e
+  background: var(--christine)
 }
 
 .btn--big {
@@ -414,7 +428,7 @@ body {
   display: flex;
   width: 868px;
   min-height: 622px;
-  background-image: url(../img/about-us-1920.webp);
+  background-image: url(../img/work/work-1920.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat
@@ -439,7 +453,7 @@ body {
 .big-card__description {
   max-width: 435px;
   font-weight: 700;
-  color: #fff
+  color: var(--white)
 }
 
 .big-card__btn {
@@ -448,25 +462,25 @@ body {
 
 .btn--orange-border {
   padding: 18px 35px;
-  border: 3px solid #f90;
-  color: #fff;
+  border: 3px solid var(--orange-peel);
+  color: var(--white);
   font-weight: bold
 }
 
 .btn--orange-border:hover {
-  color: #fff;
-  background: #f90
+  color: var(--white);
+  background: var(--orange-peel)
 }
 
 .btn--orange-border:focus {
-  background: #f90;
+  background: var(--orange-peel);
   outline: none
 }
 
 .btn--orange-border:active {
-  color: #fff;
-  background: #e1670e;
-  border: 3px solid #e1670e
+  color: var(--white);
+  background: var(--christine);
+  border: 3px solid var(--christine)
 }
 
 .about-us__list {
@@ -474,7 +488,7 @@ body {
 }
 
 .about-us__item {
-  border: 1px solid #cacaca;
+  border: 1px solid var(--silver);
   padding: 63px 110px 63px 297px;
   background-position: 58px 62px;
   background-repeat: no-repeat
@@ -529,16 +543,16 @@ body {
 }
 
 .work__step:hover {
-  color: #f90
+  color: var(--orange-peel)
 }
 
 .work__step:focus {
-  border: 2px solid #f90;
+  border: 2px solid var(--orange-peel);
   outline: none
 }
 
 .work__step--active {
-  color: #e1670e
+  color: var(--christine)
 }
 
 .work__consultation {
@@ -579,24 +593,24 @@ body {
   padding: 20px 36px;
   line-height: 20px;
   text-align: center;
-  outline: 1px solid #333
+  outline: 1px solid var(--mine-shaft)
 }
 
 .btn--white:hover {
-  color: #fff;
-  background: #666;
-  outline: 1px solid #666
+  color: var(--white);
+  background: var(--dove-gray);
+  outline: 1px solid var(--dove-gray)
 }
 
 .btn--white:focus {
-  color: #fff;
-  background: #666
+  color: var(--white);
+  background: var(--dove-gray)
 }
 
 .btn--white:active {
-  color: #fff;
-  background: #000;
-  outline: 1px solid #000
+  color: var(--white);
+  background: var(--black);
+  outline: 1px solid var(--black)
 }
 
 .work-card__img {
@@ -617,37 +631,38 @@ body {
 }
 
 .question__item {
-  border-top: 1px solid #cacaca;
-  border-bottom: 1px solid #cacaca;
+  border-top: 1px solid var(--silver);
+  border-bottom: 1px solid var(--silver);
   margin-top: -1px
 }
 
 .question__item:hover {
   position: relative;
-  border-top: 1px solid #f90;
-  border-bottom: 1px solid #f90
+  border-top: 1px solid var(--orange-peel);
+  border-bottom: 1px solid var(--orange-peel)
 }
 
 .question__item:focus-within {
-  border-top: 1px solid #f90;
-  border-bottom: 1px solid #f90
+  border-top: 1px solid var(--orange-peel);
+  border-bottom: 1px solid var(--orange-peel)
 }
 
 .question__item:active {
-  border-top: 1px solid #cacaca;
+  border-top: 1px solid var(--silver);
   border-bottom: none;
-  color: #333
+  color: var(--mine-shaft)
 }
 
 .question__title-btn {
   font-weight: bold;
   font-size: 24px;
   line-height: 29px;
-  text-align: left
+  text-align: left;
+  color: var(--mine-shaft);
 }
 
 .question__slash {
-  color: #cacaca
+  color: var(--silver)
 }
 
 .ui-accordion-content {
@@ -697,7 +712,7 @@ body {
 }
 
 .ui-state-hover, .ui-state-focus {
-  color: #f90
+  color: var(--orange-peel)
 }
 
 .ui-state-hover::after, .ui-state-focus::after {
@@ -705,7 +720,7 @@ body {
 }
 
 .ui-accordion-header-active {
-  color: #333
+  color: var(--mine-shaft)
 }
 
 .ui-accordion-header-active::after {
@@ -728,7 +743,7 @@ body {
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 50px 75px;
-  background-color: #333
+  background-color: var(--mine-shaft);
 }
 
 .footer__menu {
@@ -748,20 +763,20 @@ body {
   font-size: 18px;
   font-weight: 600;
   line-height: 36px;
-  color: #cacaca
+  color: var(--silver)
 }
 
 .footer-nav__link:hover {
-  color: #f90
+  color: var(--orange-peel)
 }
 
 .footer-nav__link:focus {
   outline-offset: 5px;
-  outline: 2px solid #f90
+  outline: 2px solid var(--orange-peel)
 }
 
 .footer-nav__link:active {
-  color: #e1670e;
+  color: var(--christine);
   outline: none
 }
 
@@ -782,16 +797,16 @@ body {
 }
 
 .social__link:focus {
-  outline: 2px solid #f90;
+  outline: 2px solid var(--orange-peel);
   outline-offset: 5px
 }
 
 .social__link:hover path {
-  fill: #f90
+  fill: var(--orange-peel)
 }
 
 .social__link:active, .social__link:active path {
-  fill: #e1670e;
+  fill: var(--christine);
   outline: none
 }
 
@@ -800,7 +815,7 @@ body {
 }
 
 .form__title {
-  color: #cacaca;
+  color: var(--silver);
   font-size: 48px;
   line-height: 59px;
   margin-bottom: 25px
@@ -813,56 +828,56 @@ body {
   margin-bottom: 25px;
   background-color: #414141;
   border: none;
-  color: #fff
+  color: var(--white)
 }
 
 .form__item::-webkit-input-placeholder {
-  color: #cacaca
+  color: var(--silver)
 }
 
 .form__item::-moz-placeholder {
-  color: #cacaca
+  color: var(--silver)
 }
 
 .form__item:-ms-input-placeholder {
-  color: #cacaca
+  color: var(--silver)
 }
 
 .form__item::-ms-input-placeholder {
-  color: #cacaca
+  color: var(--silver)
 }
 
 .form__item::placeholder {
-  color: #cacaca
+  color: var(--silver)
 }
 
 .form__item:hover {
-  background-color: #666
+  background-color: var(--dove-gray)
 }
 
 .form__item:focus {
-  background-color: #666;
+  background-color: var(--dove-gray);
   outline: none
 }
 
 .form__item:active::-webkit-input-placeholder {
-  color: #fff
+  color: var(--white)
 }
 
 .form__item:active::-moz-placeholder {
-  color: #fff
+  color: var(--white)
 }
 
 .form__item:active:-ms-input-placeholder {
-  color: #fff
+  color: var(--white)
 }
 
 .form__item:active::-ms-input-placeholder {
-  color: #fff
+  color: var(--white)
 }
 
 .form__item:active::placeholder {
-  color: #fff
+  color: var(--white)
 }
 
 .form__item--message {
@@ -877,7 +892,7 @@ body {
 .footer__text {
   padding-top: 87px;
   width: 363px;
-  color: #cacaca
+  color: var(--silver)
 }
 
 .custom-checkbox {
@@ -899,7 +914,7 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  color: #cacaca;
+  color: var(--silver);
   cursor: pointer
 }
 
@@ -908,7 +923,7 @@ body {
   display: inline-block;
   width: 14px;
   height: 14px;
-  border: 1px solid #cacaca;
+  border: 1px solid var(--silver);
   margin-right: 5px;
   background-repeat: no-repeat;
   background-position: center center
@@ -937,7 +952,8 @@ body {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    padding: 26px 50px 22px
+    padding: 26px 50px 22px;
+
   }
 
   .burger__menu {
@@ -961,8 +977,8 @@ body {
     margin-bottom: 81px
   }
 
-  .swiper {
-    height: 668px
+  .swiper--hero {
+    height: 668px;
   }
 
   .hero__content {
@@ -1005,7 +1021,7 @@ body {
   .big-card {
     width: 100%;
     min-height: 640px;
-    background-image: url(../img/about-us-1024.webp)
+    background-image: url(../img/work/work-1024.webp)
   }
 
   .about-us__img {
@@ -1109,7 +1125,7 @@ body {
     top: 69px
   }
 
-  .swiper {
+  .swiper--hero {
     height: 663px
   }
 
@@ -1131,7 +1147,7 @@ body {
 
   .big-card {
     min-height: 650px;
-    background-image: url(../img/about-us-768.webp)
+    background-image: url(../img/work/work-768.webp);
   }
 
   .big-card__bottom-info {
@@ -1263,7 +1279,7 @@ body {
     top: 71px
   }
 
-  .swiper {
+  .swiper--hero {
     height: 308px
   }
 
@@ -1346,7 +1362,7 @@ body {
     content: "";
     height: 200px;
     width: 100%;
-    background-image: url(../img/about-us-320.webp);
+    background-image: url(../img/work/work-320.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1367,15 +1383,15 @@ body {
   }
 
   .btn--orange-border {
-    color: #f90;
-    border-color: #f90;
+    color: var(--orange-peel);
+    border-color: var(--orange-peel);
     font-size: 12px;
     line-height: 15px;
     padding: 11px 40px
   }
 
   .btn--orange-border:focus {
-    color: #fff
+    color: var(--white)
   }
 
   .about-us__item {
