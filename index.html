@@ -24,6 +24,7 @@
   <script defer src="js/slider.js"></script>
   <script defer src="js/burger-menu.js"></script>
   <script defer src="js/accordion.js"></script>
+  <script defer src="js/scroll.js"></script>
 
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -43,19 +44,16 @@
     <div id="menu" class="burger__menu">
       <ul class="burger__list ul-reset">
         <li class="burger__item">
-          <a href="#" class="burger__link a-reset" tabindex="2">О нас</a>
+          <a href="#about" class="burger__link a-reset scroll-link" tabindex="2">О нас</a>
         </li>
         <li class="burger__item">
-          <a href="#" class="burger__link a-reset" tabindex="3">Проекты</a>
+          <a href="#work" class="burger__link a-reset scroll-link" tabindex="4">Этапы</a>
         </li>
         <li class="burger__item">
-          <a href="#" class="burger__link a-reset" tabindex="4">Этапы</a>
+          <a href="#question" class="burger__link a-reset scroll-link" tabindex="5">Вопросы</a>
         </li>
         <li class="burger__item">
-          <a href="#" class="burger__link a-reset" tabindex="5">Отзывы</a>
-        </li>
-        <li class="burger__item">
-          <a href="#" class="burger__link a-reset" tabindex="6">Контакты</a>
+          <a href="#contacts" class="burger__link a-reset scroll-link" tabindex="6">Контакты</a>
         </li>
       </ul>
     </div>
@@ -70,19 +68,17 @@
     <nav class="header__nav nav ">
       <ul class="nav__list ul-reset">
         <li class="nav__item">
-          <a href="#" class="nav__link a-reset" tabindex="2" aria-label="ссылка О нас">О нас</a>
+          <a href="#about" class="nav__link a-reset scroll-link" tabindex="2" aria-label="ссылка О нас">О нас</a>
         </li>
         <li class="nav__item">
-          <a href="#" class="nav__link a-reset" tabindex="3" aria-label="ссылка Проекты">Проекты</a>
+          <a href="#work" class="nav__link a-reset scroll-link" tabindex="4" aria-label="ссылка Этапы">Этапы</a>
         </li>
         <li class="nav__item">
-          <a href="#" class="nav__link a-reset" tabindex="4" aria-label="ссылка Этапы">Этапы</a>
+          <a href="#question" class="nav__link a-reset scroll-link" tabindex="5" aria-label="ссылка Отзывы">Вопросы</a>
         </li>
         <li class="nav__item">
-          <a href="#" class="nav__link a-reset" tabindex="5" aria-label="ссылка Отзывы">Отзывы</a>
-        </li>
-        <li class="nav__item">
-          <a href="#" class="nav__link a-reset" tabindex="6" aria-label="ссылка Контакты">Контакты</a>
+          <a href="#contacts" class="nav__link a-reset scroll-link" tabindex="6"
+            aria-label="ссылка Контакты">Контакты</a>
         </li>
       </ul>
     </nav>
@@ -146,7 +142,7 @@
     </section>
 
     <!--about-us-->
-    <section class="about-us content__section ">
+    <section class="about-us content__section " id="about">
       <div class="about-us__info">
         <h2 class="about-us__title title">О нас</h2>
         <p class="p-reset">
@@ -194,7 +190,7 @@
     </section>
 
     <!--work-->
-    <section class="work content__section ">
+    <section class="work content__section " id="work">
       <h2 class="work__title title">Как мы работаем</h2>
       <ul class="work__list ul-reset">
         <li class="work__item">
@@ -312,7 +308,7 @@
     </section>
 
     <!--question-->
-    <section class="question content__section ">
+    <section class="question content__section " id="question">
       <h2 class="question__title title">Часто задаваемые вопросы</h2>
       <ul class="question__list ul-reset ">
         <li class="question__item">
@@ -406,7 +402,7 @@
     </section>
   </main>
   <!---->
-  <footer class="container footer">
+  <footer class="container footer" id="contacts">
     <div class="footer__menu">
       <a class="logo footer__logo">
         <img class="footer__logo-img" src="img/footer-logo.svg" alt="Logo">
